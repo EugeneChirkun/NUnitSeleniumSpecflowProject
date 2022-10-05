@@ -1,3 +1,4 @@
+using NUnitSeleniumSpecflowProject.PageObjects;
 using System;
 using TechTalk.SpecFlow;
 
@@ -6,34 +7,41 @@ namespace NUnitSeleniumSpecflowProject.StepDefinition
     [Binding]
     public class SignUpSteps
     {
+        SignUpPage signUpPage;
+
+        public SignUpSteps()
+        {
+            signUpPage = new SignUpPage();
+        }
+
         [Given(@"I navigate to the website")]
         public void GivenINavigateToTheWebsite()
         {
-            throw new PendingStepException();
+            signUpPage.NavigateToWebsite();
         }
 
         [Given(@"I enter my Username")]
         public void GivenIEnterMyUsername()
         {
-            throw new PendingStepException();
+            signUpPage.EnterUsername();
         }
 
         [Given(@"I enter my Email")]
         public void GivenIEnterMyEmail()
         {
-            throw new PendingStepException();
+            signUpPage.EnterEmail();
         }
 
         [Given(@"I enter my Password")]
         public void GivenIEnterMyPassword()
         {
-            throw new PendingStepException();
+            signUpPage.EnterPassword();
         }
 
         [When(@"I click on Sign up")]
         public void WhenIClickOnSignUp()
         {
-            throw new PendingStepException();
+            signUpPage.ClickSignUpBtn();
         }
 
         [Then(@"I should be able to register succesfully")]
