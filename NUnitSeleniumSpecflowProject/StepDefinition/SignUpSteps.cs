@@ -1,5 +1,7 @@
+using NUnit.Framework;
 using NUnitSeleniumSpecflowProject.PageObjects;
 using System;
+using System.Threading;
 using TechTalk.SpecFlow;
 
 namespace NUnitSeleniumSpecflowProject.StepDefinition
@@ -47,7 +49,8 @@ namespace NUnitSeleniumSpecflowProject.StepDefinition
         [Then(@"I should be able to register succesfully")]
         public void ThenIShouldBeAbleToRegisterSuccesfully()
         {
-            throw new PendingStepException();
+            Thread.Sleep(5000);
+            Assert.That(signUpPage.IsPopularTagsDisplayed);
         }
     }
 }

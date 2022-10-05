@@ -19,7 +19,7 @@ namespace NUnitSeleniumSpecflowProject.Utilities
         [AfterScenario]
         public void AfterScenario()
         {
-            driver.Quit();
+           driver.Quit();
         }
     }
 }
