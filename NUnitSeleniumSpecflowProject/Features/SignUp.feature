@@ -1,9 +1,13 @@
 ﻿Feature: SignUp
 
-A short summary of the feature
+In order to use the benefit of the website
+I will need to first sign up
 
 @tag1
-Scenario: [scenario name]
-	Given [context]
-	When [action]
-	Then [outcome]
+Scenario: Valid Sign Up
+	Given I navigate to the website
+	And I enter my Username
+	And I enter my Email
+	And I enter my Password
+	When I click on Sign up
+	Then I should be able to register succesfully
