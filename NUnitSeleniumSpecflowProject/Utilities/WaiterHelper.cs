@@ -4,7 +4,19 @@ using System.Text;
 
 namespace NUnitSeleniumSpecflowProject.Utilities
 {
-    internal class WaiterHelper
+    public class WaiterHelper
     {
+        public static void For(Func<bool> func, int numberOfAttempts = 5, int intervalInMilliseconds = 1000)
+        {
+            for (int i = 0; i < numberOfAttempts; i++)
+            {
+                if (func.Invoke())
+                {
+                    return;
+                }
+                System.Threading.Thread.Sleep(intervalInMilliseconds);
+            }
+        }
+
     }
 }
